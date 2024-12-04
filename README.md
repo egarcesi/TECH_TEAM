@@ -1,2 +1,2 @@
 # TECH_TEAM
- Ejercicio de desarrollo de una página web del programa Talento Tech
+ Proyecto de desarrollo de una página web sobre energías renovables como parte del bootcamp de programación del programa Talento Tech 2024.
