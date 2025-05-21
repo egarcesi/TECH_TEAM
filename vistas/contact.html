@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energía Hidroeléctrica en Colombia</title>
+    <link rel="icon" href="../assets/Tech_Team.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+
+    <header id="header">
+
+        <nav>
+          <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+          <ul class="nav-links" id="nav-links">
+                <a href="about.html">
+                    <img src="../assets/Tech_Team.jpg" alt="Icono" id="icono">
+                </a>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="analisis.html">Análisis comparativo</a></li>
+                <li><a href="historias.html">Conoce más</a></li>
+                <li><a href="contact.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+  <section id="contactenos" class="contact-section">
+    <section class="contact-head">
+    <header class="contact-header">
+      <h1>Contáctenos</h1>
+      <p>¿Tienes alguna pregunta o comentario? Nuestro equipo estará encantado de ayudarte.</p>
+    </header>
+  </section>
+  
+    <div class="contact-content">
+      <!-- Formulario de contacto -->
+      <div class="contact-form">
+        <h2>Envíanos un mensaje</h2>
+        <form id="form-contacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+  
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+  
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
+  
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+  
+          <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+      </div>
+  
+      <!-- Información adicional -->
+      <div class="contact-inf">
+        <h2>Nuestra Ubicación</h2>
+        <div id="mapa" class="map-container">
+            <!-- Google Maps centrado en Unicentro Medellín con marcador -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5634171492985!2d-75.58904047557454!3d6.235381195286464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442882ae19cc63%3A0xc6b1cdb700f10b64!2sCentro%20Comercial%20Unicentro%20Medell%C3%ADn!5e0!3m2!1ses-419!2sco!4v1701117157006!5m2!1ses-419!2sco" 
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="contact-details">
+            <p><strong>Dirección:</strong> Centro Comercial Unicentro, Medellín - Antioquia, Colombia</p>
+            <p><strong>Horario:</strong> Lunes a viernes, 8:00 AM - 6:00 PM</p>
+            <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+        </div>
+    </div>
+    
+    <!-- API de Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
+<script>
+    function initMap() {
+        // Coordenadas de Unicentro Medellín
+        const unicentroMedellin = { lat: 6.235381, lng: -75.589041 };
+
+        // Crear el mapa centrado en las coordenadas
+        const map = new google.maps.Map(document.getElementById("googleMap"), {
+            zoom: 15, // Nivel de zoom
+            center: unicentroMedellin, // Coordenadas del centro
+        });
+
+        // Agregar el marcador
+        new google.maps.Marker({
+            position: unicentroMedellin,
+            map: map,
+            title: "Centro Comercial Unicentro Medellín", // Texto que aparece al pasar el ratón
+        });
+    }
+
+    // Inicializar el mapa
+    initMap();
+</script>
+    
+
+
+    <!-- PIE DE PAGINA--> 
+
+    <footer>
+        <div class="footer-container">
+          <!-- Información de Contacto -->
+          <div class="footer-section contact-info">
+            <h3>Información de Contacto</h3>
+            <p>📞 Teléfono: +57 300 000 0000</p>
+            <p>📧 Correo: contacto@tech-team.com</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+      
+          <!-- Enlaces importantes -->
+          <div class="footer-section important-links">
+            <h3>Enlaces importantes</h3>
+            <ul>
+              <li><a href="#">Políticas de privacidad</a></li>
+              <li><a href="#">Términos de uso</a></li>
+              <li><a href="https://www.minenergia.gov.co/" target="_blank">Ministerio de Minas y Energía</a></li>
+            </ul>
+          </div>
+      
+          <!-- Suscripción al Boletín -->
+          <div class="footer-section newsletter">
+            <h3>Suscríbete a nuestro Boletín</h3>
+            <form action="/subscribe" method="POST">
+                <label for="email">Suscríbete al boletín:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Teach Team. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+    
+</body>
+</html>

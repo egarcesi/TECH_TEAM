@@ -1,0 +1,521 @@
+/* Estilos básicos de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-position: center; /* Centra la imagen en la página */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+main {
+    padding-top: 0px; /* Ajusta según la altura del header */
+    padding-bottom: 0px; /* Ajusta según la altura del footer */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho del contenido */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: bold;
+    color: #fbfcfc;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(7, 7, 7);
+    margin-right: 0px;
+}
+
+
+/* Navegación */
+
+nav {
+  display: flex;
+  position: fixed; /* Fija el nav en la parte superior de la página */
+  top: 0;
+  left: 0;
+  width: 100%; /* Abarca todo el ancho de la ventana */
+  background-color: rgba(243, 245, 245, 0.909); /* Color con transparencia */
+  z-index: 10; /* Asegura que el nav esté al frente */
+  padding: 10px 0; /* Añade un poco de espacio alrededor de los elementos */
+  justify-content: space-between; /* Distribuye ícono y menú */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+#icono {
+  margin-left: 15px; /* Separa el ícono del borde */
+  width: 60px;
+  height: auto;
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 20px; /* Espaciado entre enlaces */
+}
+
+/* Estilo de enlaces */
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #f1c40f; /* Cambia el color al hacer hover */
+}
+
+
+/* Menu Hamburguesa */
+
+.menu-icon {
+display: none;
+flex-direction: column;
+justify-content: space-around;
+width: 30px;
+height: 25px;
+cursor: pointer;
+}
+
+.menu-icon span {
+display: block;
+width: 100%;
+height: 3px;
+background-color: white;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-links li {
+margin: 0 15px;
+}
+
+.nav-links li a {
+text-decoration: none;
+color: rgb(7, 7, 7);
+font-size: 16px;
+transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+color: #f1c40f;
+}
+
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+.menu-icon {
+    display: flex; /* Mostrar el ícono hamburguesa */
+}
+
+nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Altura del nav */
+    right: 0;
+    background-color: #007bff;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transform: translateX(100%); /* Oculto por defecto */
+    transition: transform 0.3s ease-in-out;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+/* Mostrar menú al activarse */
+nav ul.active {
+    transform: translateX(0); /* Mover el menú dentro de la pantalla */
+}
+
+.nav-links {
+  top: 60px; /* Justo debajo del nav */
+  right: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #007bff;
+  transform: scaleY(0); /* Ocultamos el menú por defecto */
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mostrar el menú al pasar el cursor sobre el ícono */
+.menu-icon:hover + .nav-links,
+.nav-links:hover {
+  transform: scaleY(1); /* Expande el menú verticalmente */
+}
+
+.nav-links li {
+  margin: 10px 0; /* Espaciado vertical entre los enlaces */
+}
+
+.nav-links li a {
+  font-size: 18px; /* Aumenta el tamaño del texto para pantallas pequeñas */
+}
+}
+
+/* SECCION CALCULAR ENERGIA */
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%; /* Cambiar ancho fijo por relativo */
+  width: 1200px; /* Solo en pantallas grandes */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+
+.container h1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: #28a770c4;
+  color: white;
+  border-radius: 12px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.container h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #28a746c9;
+}
+
+.container ul {
+  list-style-type: square;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.container code {
+  background-color: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #578547aa;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: italic;
+  color: #070707;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+    width: 100%; /* Ajustar al ancho de la pantalla */
+    padding: 20px; /* Reducir el padding */
+  }
+
+  .container h1 {
+    font-size: 1.5rem; /* Ajustar tamaño de fuente */
+  }
+
+  .container h2 {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%; /* Hacer los botones más accesibles */
+    padding: 15px;
+  }
+}
+
+
+/* SECCION TABLAS */
+
+/* Estilos básicos para la tabla */
+.tabla-consumo, .tabla_produccion{
+  border-collapse: collapse;
+  margin: 40px 0px;
+  font-family: Arial, sans-serif;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+
+/* Estilo de las celdas y el borde */
+.tabla-consumo th, .tabla-consumo td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.tabla-produccion th, .tabla-produccion td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras */
+.tabla-consumo th, .tabla-produccion th {
+  background-color: #5191c5;
+  color: white;
+}
+
+
+/* Efecto hover sobre las filas */
+.tabla-consumo tr:hover, .tabla-produccion tr:hover {
+  background-color: #e4ef154e;
+}
+
+
+
+/* SECCION ANALISIS */
+
+/* Introducción */
+.intro-section {
+  text-align: center;
+  color: #f7f8f8;
+}
+
+.contact-head {
+  position: relative; /* Necesario para colocar texto sobre la imagen */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 400px; /* Ajusta la altura */
+  background-image: url('../assets/Opc2.jpg'); /* Ruta imagen */
+  background-size: cover; /* La imagen cubre todo el área */
+  background-position: center; /* Centra la imagen */
+  display: flex; /* Para centrar texto */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  background-color: rgba(0, 0, 0, 0.622); /* Fondo negro semitransparente */
+  background-blend-mode: overlay; /* Combina la imagen con el color */
+}
+
+.intro-section h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Secciones */
+.analysis-section, .comparison-section, .conclusions-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.analysis-section h2, .comparison-section h2, .conclusions-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Gráficos */
+/* Contenedor principal para el gráfico */
+.chart-container {
+  display: flex;
+  justify-content: center; /* Centra el gráfico horizontalmente */
+  align-items: center; /* Centra el gráfico verticalmente */
+  padding: 20px; /* Espaciado interno */
+  width: 90%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px;
+  margin: auto; /* Centra el contenedor en la página */
+  margin-top: 60px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra para resaltar el gráfico */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+}
+
+/* Imagen del gráfico */
+.chart-container img {
+  width: 100%; /* Asegura que el gráfico ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  border-radius: 8px; /* Coincide con el contenedor */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .chart-container {
+      padding: 5px; /* Reduce el espaciado en dispositivos pequeños */
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+      max-width: 90%; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+  }
+}
+
+
+
+/* PIE DE PAGINA */
+
+/* Footer Container */
+footer {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    margin-top: 150px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Footer Sections */
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f4d03f;
+    padding-bottom: 5px;
+  }
+  
+  /* Contact Info */
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  .social-media a {
+    color: #f4d03f;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #ffffff;
+  }
+  
+  /* Important Links */
+  .important-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .important-links ul li {
+    margin: 10px 0;
+  }
+  
+  .important-links ul li a {
+    color: #f4d03f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .important-links ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* Newsletter */
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .newsletter button {
+    background-color: #f4d03f;
+    color: #0d3b66;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter button:hover {
+    background-color: #ffffff;
+    color: #216fb8;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    background-color: #062d4f;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }

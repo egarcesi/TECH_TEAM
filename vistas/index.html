@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energía Hidroeléctrica en Colombia</title>
+    <link rel="icon" href="../assets/Tech_Team.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-o8F28MKX2UUuexr7LrJm5zJrRcU3WrQk0yZjVr1dRaA="
+          crossorigin=""
+        />
+        <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-o2u6nCKKmQKALEjKrzyyoa7Tp4RmIlE7CZBo03DO7M0="
+          crossorigin=""
+        ></script>
+    </head>
+    
+    <script src="../js/index.js"></script>
+
+    <!-- Animaciones con GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+  gsap.from(".event-content", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3
+  });
+</script>
+
+    
+</head>
+<body>
+
+    <header id="header">
+
+        <nav>
+              <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+              <ul class="nav-links" id="nav-links">
+                <a href="about.html">
+                    <img src="../assets/Tech_Team.jpg" alt="Icono" id="icono">
+                </a>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="analisis.html">Análisis comparativo</a></li>
+                <li><a href="historias.html">Conoce más</a></li>
+                <li><a href="contact.html">Contáctenos</a></li>
+              </ul>
+        </nav>
+
+    </header>
+
+
+    <div id="layerslider" style="width: 100%; height: 500px;" class="ls-container ls-fullwidth">
+
+        <a class="ls-nav-prev" href="javascript:void(0);">
+            <i class="fas fa-chevron-left"></i> <!-- Flecha izquierda -->
+        </a>
+        <a class="ls-nav-next" href="javascript:void(0);">
+            <i class="fas fa-chevron-right"></i> <!-- Flecha derecha -->
+        </a>
+
+
+        <!-- Slide 1 -->
+        <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P1.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P2.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P3.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+    
+        <!-- Slide 4 -->
+        <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P4.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+
+         <!-- Slide 5 -->
+         <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P5.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+
+         <!-- Slide 6 -->
+         <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P6.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+
+         <!-- Slide 7 -->
+         <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P7.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+            <img src="../assets/P8.jpg" class="ls-bg" style="width: 100%; height: 500px;" />
+        </div>
+    </div>
+
+    <!-- SECCION HERO -->
+
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>Energía hidroeléctrica: el motor renovable de Colombia</h1>
+        <p>Sostenibilidad en cada gota</p>
+        <div class="hero-buttons">
+          <a href="historias.html">
+          <button id="cta2" class="cta-button">Proyectos destacados en Colombia</button>
+         </a>
+        </div>
+      </div>
+    </section>
+  
+
+    <!-- SECCION INFORMATIVA -->
+
+    <section id="info-section" class="info-section">
+      <h2>¿Por qué la energía hidroeléctrica es clave para Colombia?</h2>
+      <div class="info-cards">
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/fluency/96/environment.png" alt="Sostenibilidad Ambiental">
+          </div>
+          <h3>Sostenibilidad Ambiental</h3>
+          <p>La energía hidroeléctrica reduce las emisiones de CO₂, contribuyendo al cuidado del planeta.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/fluency/96/water.png" alt="Abundancia Hídrica">
+          </div>
+          <h3>Abundancia Hídrica</h3>
+          <p>Colombia, rica en recursos hídricos, tiene un gran potencial para generar energía limpia.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/?size=100&id=84824&format=png&color=000000" alt="Impacto Social">
+          </div>
+          <h3>Impacto Social</h3>
+          <p>Genera empleo, mejora la electrificación rural y fomenta el desarrollo en comunidades locales.</p>
+        </div>
+      </div>
+    </section>
+    
+      <div class="ls-slide" data-ls="slidedelay:4500; transition2d:25;">
+        <div class="timeline-section">
+          <h2>Primeros años de la Energía Eléctrica en Colombia</h2>
+
+            
+            <!-- Línea de tiempo horizontal -->
+            <div class="timeline">
+              <!-- Evento 1 -->
+                <div class="timeline-event">
+                    <div class="timeline-header">
+                        <span class="year">1889</span>
+                        <span class="title">Bogotá Electric Light Company</span>
+                        <button class="btn-more" onclick="toggleDetails(this)">+</button>
+                    </div>
+                    <div class="timeline-details">
+                       <p>Bogotá Electric Light Company entrega al público el primer servicio de alumbrado público del país.</p>
+                    </div>
+                </div>  
+                <!-- Evento 2 -->
+                <div class="timeline-event">
+                  <div class="timeline-header">
+                      <span class="year">1890</span>
+                      <span class="title">Primera planta hidroeléctrica</span>
+                      <button class="btn-more" onclick="toggleDetails(this)">+</button>
+                  </div>
+                  <div class="timeline-details">
+                     <p>Se inicia la contrucción de la planta hidroeléctrica de Chitonta en el rio Suratá, en el departamento de Santander.</p>
+                  </div>
+              </div>  
+                <!-- Evento 3 -->
+                <div class="timeline-event">
+                  <div class="timeline-header">
+                    <span class="year">1895</span>
+                    <span class="title">Central Hidroléctrica Santa Elena</span>
+                    <button class="btn-more" onclick="toggleDetails(this)">+</button>
+                  </div>
+                  <div class="timeline-details">
+                    <p> La compañia Antioqueña de Instalaciones Eléctricas construyó la central hidroléctrica de Santa Elena cerca a la ciudad de Medellín, con capacidad de 350 kW.</p>
+                  </div>
+              </div>    
+               <!-- Evento 4 -->
+              <div class="timeline-event">
+                <div class="timeline-header">
+                  <span class="year">1900</span>
+                  <span class="title">Central Hidroeléctrica El Charquito</span>
+                  <button class="btn-more" onclick="toggleDetails(this)">+</button>
+                </div>
+                <div class="timeline-details">
+                  <p>Comienza a operar cerca de Bogotá la central hidroeléctrica El Charquito, con una capacidad de 300kW.</p>
+                </div>
+            </div> 
+              <!-- Evento 5 -->
+            <div class="timeline-event">
+              <div class="timeline-header">
+                <span class="year">1909</span>
+                <span class="title">Compañia Colombiana de Electricidad</span>
+                <button class="btn-more" onclick="toggleDetails(this)">+</button>
+              </div>
+              <div class="timeline-details">
+                <p>Fue fundada la compañia Colombiana de Electricidad para suministrar electricidad a la Costa Atlántica y a Cali. 
+                  La central hidroeléctrica del río Cali comienza su servicio con una capacidad de 500 kW.</p>
+              </div>
+          </div> 
+            <!-- Evento 6 -->
+          <div class="timeline-event">
+            <div class="timeline-header">
+              <span class="year">1911</span>
+              <span class="title">Embalse río Bogotá </span>
+              <button class="btn-more" onclick="toggleDetails(this)">+</button>
+            </div>
+            <div class="timeline-details">
+              <p> Se contruye la presa de embalse para regular los caudales del río Bogotá y alimentar la central hidroeléctrica de El Charquito.</p>
+            </div>
+        </div> 
+            <!-- Evento 7 -->
+        <div class="timeline-event">
+          <div class="timeline-header">
+            <span class="year">1912</span>
+            <span class="title">Ampliación central electrica Santa Elena</span>
+            <button class="btn-more" onclick="toggleDetails(this)">+</button>
+          </div>
+          <div class="timeline-details">
+            <p>Fue ampliada la central eléctrica de Santa Elena para atender la creciente demanda de energía eléctrica de Medellín.</p>
+          </div>
+      </div> 
+             <!-- Evento 8 -->
+        <div class="timeline-event">
+          <div class="timeline-header">
+            <span class="year">1921</span>
+            <span class="title">Central Hidroeléctrica Piedras Blancas</span>
+            <button class="btn-more" onclick="toggleDetails(this)">+</button>
+          </div>
+          <div class="timeline-details">
+            <p>Entra en operación en Medellín la primera central de aprovechamiento hidráulico múltiple en Piedras Blancas, con una capacidad de 1.500 kW de potencia instalada.</p>
+          </div>
+      </div> 
+                <!-- Evento 9 -->
+        <div class="timeline-event">
+          <div class="timeline-header">
+            <span class="year">1929</span>
+            <span class="title">Central Hidroeléctrica Guadalupe I</span>
+            <button class="btn-more" onclick="toggleDetails(this)">+</button>
+          </div>
+          <div class="timeline-details">
+            <p> Se inicia la construcción de la central hidroeléctrica de Guadalupe I en el departamento de Antioquia, en este año se estimo la demanada nacional en 9.500 kW.</p>
+          </div>
+      </div> 
+                <!-- Añadir más eventos -->
+            </div>
+        </div>
+    </div>
+
+    
+  <!-- PARA EL VIDEO EXPLICATIVO-->
+
+        <section href="video" id="descubre-como-funciona" class="video-section">
+          <h2>Descubre cómo funciona una central hidroeléctrica</h2>
+          <p>Las centrales hidroeléctricas son una de las fuentes más importantes de energía renovable en Colombia.
+            Este video te ayudará a comprender el proceso detrás de la generación de energía a partir del agua,
+            un recurso abundante en nuestro país.</p> 
+          <p>¡Mira cómo una central hidroeléctrica transforma el agua en energía limpia!</p>
+          <div class="video-container">
+              <iframe 
+                  src="https://www.youtube.com/embed/Z34TbQB79jE?si=xvrtneuX9ZsFXMPk" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+              </iframe>
+          </div>
+          <p>
+            ¿Te gustaría saber más sobre proyectos hidroeléctricos en Colombia?</p> 
+           <p> <a href="historias.html">Descubre los proyectos destacados</a>
+          </p>
+      </section>
+    
+
+ <!-- PIE DE PAGINA--> 
+
+    <footer>
+            <div class="footer-container">
+              <!-- Información de Contacto -->
+              <div class="footer-section contact-info">
+                <h3>Información de Contacto</h3>
+                <p>📞 Teléfono: +57 300 000 0000</p>
+                <p>📧 Correo: contacto@tech-team.com</p>
+                <div class="social-media">
+                  <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://x.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+          
+              <!-- Enlaces importantes -->
+              <div class="footer-section important-links">
+                <h3>Enlaces importantes</h3>
+                <ul>
+                  <li><a href="#">Políticas de privacidad</a></li>
+                  <li><a href="#">Términos de uso</a></li>
+                  <li><a href="https://www.minenergia.gov.co/" target="_blank">Ministerio de Minas y Energía</a></li>
+                </ul>
+              </div>
+          
+              <!-- Suscripción al Boletín -->
+              <div class="footer-section newsletter">
+                <h3>Suscríbete a nuestro Boletín</h3>
+                <form id="newsletterForm">
+                    <label for="email">Suscríbete al boletín:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            </div>
+
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>&copy; 2024 Teach Team. Todos los derechos reservados.</p>
+            </div>
+    </footer>
+
+
+</body>
+</html>
